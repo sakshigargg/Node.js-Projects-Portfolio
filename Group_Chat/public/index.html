@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Chat app</title>
+</head>
+<body>
+    <h1 class="title" > iChat 💬 </h1>
+    <div class ="main">
+        <div class="name">
+            <span><i class="fas fa-user"></i></span>
+            <input type="text" id ="name-input" class = "name-input" value = "anonymous" maxlength="20">
+        </div>
+
+    
+        <div class="chat-option">
+            <button class="privateChatButton" id="privateChatButton">Personal Chat</button>
+            <button class="groupChatButton" id="groupChatButton">Group Chat</button>
+        </div>    
+        
+        <ul class="message-container" id="message-container">
+
+            <li class="first-time">
+                <p class="first-time-p" id="first-time-p">
+                    Chat with ease, anywhere, anytime
+                </p>
+            </li> 
+
+            <!-- <li class="first-image" id="first-image"><img src="" alt=""></li> -->
+
+            <!-- <li class="message-left">
+                <p class="message">
+                    Hello Admin
+                    <span>xyz ⚪ 17 July, 16:07</span>
+                </p>
+            </li>
+
+            <li class="message-right">
+                <p class="message">
+                    Hey XYZ
+                    <span>admin ⚪ 17 July, 16:07</span>
+                </p>
+            </li>
+
+            
+            <li class="message-feedback">
+                <p class="feedback" id="feedback">
+                    Killer is typing a message
+                </p>
+            </li> -->
+        </ul>
+        <form class="message-form" id="message-form">
+            <input type="text" name="message" id="message-input" class="message-input" disabled>
+            <div class="v-divider"></div>
+            <button type="submit" class="send-button" id="send-button" disabled>send <span><i class="fas fa-paper-plane"></i></span></button>
+        </form>
+    </div>
+    <h3 class="clients-total" id="clients-total"> Total clients: 1</h3>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" 
+    integrity="sha512-QoJS4DOhdmG8kbbHkxmB/rtPdN62cGWXAdAFWWJPvUFF1/zxcPSdAnn4HhYZSIlVoLVEJ0LesfNlusgm2bPfnA==" 
+    crossorigin="anonymous"></script>    <script src="main.js"></script>
+</body>
+</html> 
